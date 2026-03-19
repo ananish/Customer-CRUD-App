@@ -1,81 +1,53 @@
-#  Customer CRUD App
+# Customer CRUD App
 
-## Description
-A simple full-stack application to manage customer records.  
-Users can create, view, update, and delete customers. Data is stored in a MySQL database.
+## Overview
+
+Simple full-stack application to manage customers with create, read, update, and delete operations. Data is stored in a MySQL database and accessed through a Spring Boot backend with a lightweight frontend using HTML and JavaScript.
+
+## Screenshot
+
+![App Screenshot](src/main/resources/static/images/app-screenshot.png)
 
 ---
 
 ## Tech Stack
-- Frontend: HTML, JavaScript, Tailwind CSS
-- Backend: Java, Spring Boot
-- Database: MySQL
 
----
-
-## Features
-- View all customers
-- Add new customer
-- Update existing customer
-- Delete customer
-- Input validation (no empty fields, age between 1–110)
-- Responsive UI with modern styling
-
----
-
-## How to Run
-
-### 1. Clone the repository
-git clone <your-repo-link>
-
-### 2. Start MySQL
-- Create a database named: `customer`
-
-### 3. Run Backend
-cd backend  
-mvn spring-boot:run
-
-### 4. Run Frontend
-- Open `frontend/index.html` in browser
-
----
-
-## API Endpoints
-
-- GET /api/customers
-- POST /api/customers
-- PUT /api/customers/{id}
-- DELETE /api/customers/{id}
-
----
-
-## Testing
-
-### Backend API Testing
-Tested using Postman:
-- All CRUD endpoints working correctly
-
-### Frontend Testing
-- Add, update, delete operations work
-- Form validation works
-- UI interactions function correctly
-
-### Database Testing
-- Data persists in MySQL
-- Records correctly inserted, updated, and deleted
+* Java, Spring Boot Framework
+* HTML, JavaScript, Tailwind CSS
+* MySQL
 
 ---
 
 ## Reflection
 
 ### Familiar
-- Java, Spring Boot, REST APIs
+
+I have worked with Java, Spring Boot, REST APIs, and MySQL in projects I did during my MSc. So, I could set up the backend and design the CRUD APIs efficiently.
 
 ### New
-- Connecting frontend (JS) with backend APIs
-- Styling using Tailwind CSS
 
-### Learned
-- End-to-end CRUD flow
-- Handling asynchronous operations using fetch API
-- Structuring a full-stack project
+Building both frontend & backend of the application individually and integrating them was a new experience. I got to use postman to test the APIs. Moreover, I used MySQL workbench to visualise the changes in database.
+
+### Learning
+
+This project helped me understand the complete end-to-end flow of a full-stack application, from UI interactions to backend processing and database persistence.
+I also improved my ability to build and structure a working application within a limited time constraint, focusing on functionality and validation.
+
+---
+
+## How to Run
+
+1. Configure MySQL in `application.properties`
+2. Run backend:
+
+```
+mvn spring-boot:run
+```
+
+3. Open:
+
+```
+http://localhost:8080/index.html
+```
+
+---
