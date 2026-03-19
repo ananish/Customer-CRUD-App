@@ -12,9 +12,9 @@ Simple full-stack application to manage customers with create, read, update, and
 
 ## Tech Stack
 
-* Java, Spring Boot Framework
-* HTML, JavaScript, Tailwind CSS
-* MySQL
+* Backend: Java, Spring Boot Framework
+* Frontend:HTML, JavaScript(Fetch API), Tailwind CSS
+* Database: MySQL
 
 ---
 
@@ -34,17 +34,48 @@ This project helped me understand the complete end-to-end flow of a full-stack a
 I also improved my ability to build and structure a working application within a limited time constraint, focusing on functionality and validation.
 
 ---
+## Testing
+
+### API Testing (Postman)
+
+All backend endpoints were tested using Postman to ensure correct functionality:
+
+* GET `/api/customers` – verified that all customers are returned
+* POST `/api/customers` – confirmed new customers can be created
+* PUT `/api/customers/{id}` – verified updates are applied correctly
+* DELETE `/api/customers/{id}` – confirmed records are removed
+
+Both valid and invalid inputs were tested to check input handling and response behaviour.
+
+## Postman 
+![postman](src/main/resources/static/images/postman.png)
+
+---
+
+### Database Testing (MySQL)
+
+The MySQL database was checked directly to confirm data persistence:
+
+* New entries were successfully stored in the database
+* Updates were reflected correctly in existing records
+* Deleted entries were permanently removed
+
+This confirmed that all CRUD operations are properly integrated with the database.
+
+
+## MySQL
+![MySQL](src/main/resources/static/images/MySQL.png)
 
 ## How to Run
-
-1. Configure MySQL in `application.properties`
-2. Run backend:
+Prerequisites: Java 17, MySQL, Maven.
+1. Update your MySQL configuration in application properties with your local database credentials.
+2. Start the Spring Boot application using the command:
 
 ```
 mvn spring-boot:run
 ```
 
-3. Open:
+3. Once the server starts successfully, open the application in your browser:
 
 ```
 http://localhost:8080/index.html
