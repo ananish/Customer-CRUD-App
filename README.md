@@ -67,18 +67,51 @@ This confirmed that all CRUD operations are properly integrated with the databas
 ![MySQL](src/main/resources/static/images/MySQL.png)
 
 ## How to Run
-Prerequisites: Java 17, MySQL, Maven.
-1. Update your MySQL configuration in application properties with your local database credentials.
-2. Start the Spring Boot application using the command:
+
+### Prerequisites
+
+* Java 17
+* Maven
+* MySQL installed and running
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/ananish/Customer-CRUD-App.git
+cd customer-crud-app
+```
+
+### 2. Create Database
+
+Open MySQL and run:
+
+```
+CREATE DATABASE customer;
+```
+
+### 3. Configure Database
+
+Update `src/main/resources/application.properties` with your MySQL credentials:
+
+```
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
+
+### 4. Run Backend
 
 ```
 mvn spring-boot:run
 ```
 
-3. Once the server starts successfully, open the application in your browser:
+### 5. Access Application
+
+Open in browser:
 
 ```
-http://localhost:8080/index.html
+http://localhost:8080/
 ```
 
----
+### Note
+
+* Ensure MySQL is running before starting the application
